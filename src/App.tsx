@@ -1,3 +1,12 @@
+import { QueryClientProvider } from '@tanstack/react-query'
+
+import ConnectionCheck from '@/components/pages/ConnectionCheck/ConnectionCheck'
+import { queryClient } from '@/lib/queryClient'
+
 export default function App() {
-  return <h1>Kommit</h1>
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ConnectionCheck />
+    </QueryClientProvider>
+  )
 }

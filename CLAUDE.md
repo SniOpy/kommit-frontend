@@ -6,7 +6,7 @@ Frontend de Kommit : une application React + TypeScript (Vite, Tailwind, shadcn/
 
 Cette arborescence évolue avec le projet : ce fichier doit être mis à jour à chaque modification de la structure du repo.
 
-```
+```vsc
 kommit-frontend/
 ├── CLAUDE.md
 ├── .claude/
@@ -18,7 +18,16 @@ kommit-frontend/
 ├── src/
 │   ├── main.tsx          # point d'entrée
 │   ├── App.tsx           # assemblage de l'app
-│   └── index.css         # feuille de style globale (Tailwind)
+│   ├── index.css         # feuille de style globale (Tailwind)
+│   ├── components/
+│   │   ├── ui/           # composants génériques (shadcn)
+│   │   └── pages/        # un dossier par écran
+│   ├── data/             # textes statiques des écrans
+│   ├── lib/
+│   │   └── api/          # appels au backend et clés de cache
+│   └── types/            # contrat d'API partagé avec le backend
+├── .env.example          # variables d'environnement attendues
+├── components.json       # configuration shadcn
 ├── index.html
 ├── package.json
 ├── pnpm-lock.yaml
